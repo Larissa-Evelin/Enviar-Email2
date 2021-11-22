@@ -1,0 +1,16 @@
+﻿@page
+@model ContactModel
+@{
+    ViewData["Title"] = "Contact";
+}
+<h2>@ViewData["Title"]</h2>
+<h3>@Model.Message</h3>
+
+<form method="post">
+    <label asp-for="mails.From"></label><input type="text" asp-for="mails.From"/><br/>
+    <label asp-for="mails.To"></label><input type="text" asp-for="mails.To"/><br/>
+    <label asp-for="mails.Subject"></label><input type="text" asp-for="mails.Subject"/><br/>
+    <label asp-for="mails.Body"></label><textarea asp-for="mails.Body"></textarea><br/>
+    <input type="submit"/>
+</form>
+
